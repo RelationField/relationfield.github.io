@@ -1,4 +1,4 @@
-# RelationField 🛋
+# RelationField 👆
 ## Relate Anything in Radiance Field 
 <div align="center">
 <a href="https://kochsebastian.com">Sebastian Koch</a><sup>1,2</sup>, &nbsp;&nbsp;&nbsp; <a href="https://scholar.google.com/citations?user=dfjN3YAAAAAJ">Johanna Wald</a><sup>3</sup>,

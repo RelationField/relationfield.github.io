@@ -182,6 +182,33 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+      <br>
+        <div class="content has-text-justified">
+          <p>
+            RelationField learns a 3D feature field (a) that can be queried with a relationship query location
+(b) which changes the relationship field of the 3D volume depending on what position is selected. The relationship feature is sampled and
+rendered along a ray according to NeRF’s rendering weights. The language loss maximizes the cosine similarity between the extracted sparse
+features from the 2D views and the rendered 3D relationship features. <br>
+We estimate 2D relationship proposals from a multi-model
+LLM prompted with SoM (e) for each training view and encode extracted textual relationship description into the image plane (d). A pair
+pixel sampler samples subject and object pixels (c) for which the relationship feature is distilled into the 3D volume.
+          </p>
+    </div>
+
+
+
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/method.png" class="center"/>
+  
+      </div>
+    </div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
         <h2 class="title is-3">Qualitative results</h2>
       <br>
         <div class="content has-text-centered">

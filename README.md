@@ -17,11 +17,13 @@
 
 <h2 class="title is-3">BibTeX</h2>
           <pre><code>
-@article{koch2024relationfield,
-  title={{RelationField: Relate Anything in Radiance Field }},
-  author={Koch, Sebastian and Wald, Johanna, Colosi, Mirco and Vaskevicius, Narunas and Hermosilla, Pedro and Tombari, Federico and Ropinski, Timo},
-year={2024}
-}</code></pre>
+  @article{koch2024relationfield,
+    title={RelationField: Relate Anything in Radiance Fields},
+    author={Koch, Sebastian and Wald, Johanna and Colosi, Mirco and Vaskevicius, Narunas and Hermosilla, Pedro and Tombari, Federico and Ropinski, Timo},
+    journal={arXiv preprint arXiv:2412.13652},
+    year={2024}
+  }
+  </code></pre>
     </div>
   </div>
 

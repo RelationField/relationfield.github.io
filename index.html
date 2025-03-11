@@ -231,15 +231,112 @@ pixel sampler samples subject and object pixels (c) for which the relationship f
           </p>
     </div>
 
-
-
     <div class="container is-max-desktop">
       <div class="hero-body">
         <img src="static/images/qualitative_rows_v3.png" class="center"/>
-  
       </div>
     </div>
 
+    <main>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">RelationField w/ NeRF vs w/ Gaussian Splatting</h2>
+
+            
+        
+      <div class="slidercontainer">
+        <div class="image-slidercontainer">
+          <img
+            class="image-before slider-image"
+           src="static/images/relationfield_nerf.png"
+            
+          />
+          <img
+            class="image-after slider-image"
+            src="static/images/relationfield_gsplatting.png"
+          />
+        </div>
+        <!-- step="10" -->
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Percentage of before photo shown"
+          class="slider"
+        />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="216"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="96"
+              y1="128"
+              x2="16"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="48 160 16 128 48 96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <line
+              x1="160"
+              y1="128"
+              x2="240"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="208 96 240 128 208 160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content has-text-centered">
+  <br><p>
+    RelationField can be trained with both NeRF as well as Gaussian Splatting geometry. Both approaches result in a high-quality RelationField.
+  </p>
+</div>
+  </main>
   
     <section class="section" id="BibTeX">
                   <div class="container is-max-desktop content">
@@ -275,7 +372,22 @@ pixel sampler samples subject and object pixels (c) for which the relationship f
     </div>
   </div>
 </footer>
+<script>
+//   const slidercontainer = document.querySelector('.slidercontainer');
+// document.querySelector('.slider').addEventListener('input', (e) => {
+//   slidercontainer.style.setProperty('--position', `${e.target.value}%`);
+// })
+const slidercontainer = document.querySelector('.slidercontainer');
+const slider = document.querySelector('.slider');
 
+document.addEventListener('mousemove', (e) => {
+  const rect = slidercontainer.getBoundingClientRect();
+  let position = ((e.clientX - rect.left) / rect.width) * 100;
+  position = Math.max(0, Math.min(100, position)); // Constrain between 0 and 100
+  slidercontainer.style.setProperty('--position', `${position}%`);
+  slider.value = position; // Update slider value
+});
+</script>
 </body>
 </html>
 
